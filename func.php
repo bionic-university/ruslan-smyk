@@ -5,5 +5,7 @@ function sayHello(&$name){
     $name = "Вася"; 
 }
 
-// ОШИБКА!
-sayHello("John"); 
+$n = "RUSLAN";
+
+// GOOD
+sayHello($n); 
