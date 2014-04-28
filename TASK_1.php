@@ -1,18 +1,13 @@
 <?php
 
-//TODO с кириллицей проблемы
+$str = "MYY_-_";
 
-$str = "MYY_-_"; 
-$len = mb_strlen($str);
+if(mb_strlen($str)){
 
-if($len){
-	$m = array();
+	print_r(array_count_values(str_split($str)));
 
-	for($i=0; $i<$len; $i++){
-		$m[] = $str{$i};
-	}
+}else {
 
-	$r = array_count_values($m);
-	print_r($r);
-}else
-	echo 'Enter good str!';
+    echo 'Enter good str!';
+
+}
