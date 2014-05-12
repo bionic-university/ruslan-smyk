@@ -1,0 +1,15 @@
+{
+    "name": "bionic/ruslan-smyk",
+    "authors": [
+        {
+            "name": "RUSLAN",
+            "email": "winrilz@gmail.com"
+        }
+    ],
+    "require": {
+
+        "phpunit/phpunit": "*",
+        "symfony/class-loader": "2.5.*@dev"
+
+    }
+}
