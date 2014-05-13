@@ -1,6 +1,9 @@
 <?php
 
-require_once __DIR__ . '/../bootstrap.php';
-use BionicUniversity\RuslanSmyk\TASK_1\Counter;
+$str = "MYY_-_";
 
-$obj = new Counter('RFC');
+if(mb_strlen($str)){
+	print_r(array_count_values(str_split($str)));
+}else {
+	echo 'Enter good str!';
+}
