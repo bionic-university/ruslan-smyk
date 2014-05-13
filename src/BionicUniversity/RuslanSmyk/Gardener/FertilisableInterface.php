@@ -5,13 +5,11 @@
  * Date: 06.05.14
  * Time: 18:25
  */
-
-namespace App\Classes;
-
+namespace BionicUniversity\RuslanSmyk\Gardener;
 
 /**
  * Interface FertilisableInterface
- * @package App\Classes
+ * @package BionicUniversity\RuslanSmyk\Gardener
  */
 interface FertilisableInterface {
 

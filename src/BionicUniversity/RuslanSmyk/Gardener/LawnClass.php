@@ -5,16 +5,13 @@
  * Date: 05.05.14
  * Time: 14:49
  */
-
-namespace App\Classes;
-
-use App\Classes as NS;
+namespace BionicUniversity\RuslanSmyk\Gardener;
 
 /**
  * Class LawnClass
- * @package App\Classes
+ * @package BionicUniversity\RuslanSmyk\Gardener
  */
-class LawnClass extends NS\GardenBaseAbstract {
+class LawnClass extends GardenBaseAbstract {
 
     /**
      * Плошадь

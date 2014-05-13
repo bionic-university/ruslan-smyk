@@ -5,6 +5,7 @@
  * Date: 28.04.14
  * Time: 14:56
  */
+namespace BionicUniversity\RuslanSmyk\House;
 
 class RoomClass {
 

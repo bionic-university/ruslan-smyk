@@ -5,12 +5,11 @@
  * Date: 05.05.14
  * Time: 14:23
  */
-
-namespace App\Classes;
+namespace BionicUniversity\RuslanSmyk\Gardener;
 
 /**
  * Interface WaterableInterface
- * @package App\Classes
+ * @package BionicUniversity\RuslanSmyk\Gardener
  */
 interface WaterableInterface {
 

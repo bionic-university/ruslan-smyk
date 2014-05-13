@@ -5,12 +5,11 @@
  * Date: 05.05.14
  * Time: 15:52
  */
-
-namespace App\Classes;
+namespace BionicUniversity\RuslanSmyk\Gardener;
 
 /**
  * Class GardenBaseAbstract
- * @package App\Classes
+ * @package BionicUniversity\RuslanSmyk\Gardener
  */
 abstract class GardenBaseAbstract {
 

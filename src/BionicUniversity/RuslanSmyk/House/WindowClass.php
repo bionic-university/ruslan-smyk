@@ -5,6 +5,7 @@
  * Date: 28.04.14
  * Time: 14:18
  */
+namespace BionicUniversity\RuslanSmyk\House;
 
 class WindowClass extends AbstractBase {
 

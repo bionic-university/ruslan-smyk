@@ -5,8 +5,9 @@
  * Date: 28.04.14
  * Time: 15:47
  */
+namespace BionicUniversity\RuslanSmyk\House;
 
-class DomClass {
+class HouseClass {
 
     protected $rooms = array();
 

@@ -5,16 +5,13 @@
  * Date: 05.05.14
  * Time: 14:37
  */
-
-namespace App\Classes;
-
-use App\Classes as NS;
+namespace BionicUniversity\RuslanSmyk\Gardener;
 
 /**
  * Class GardenerClass
- * @package App\Classes
+ * @package BionicUniversity\RuslanSmyk\Gardener
  */
-class GardenerClass extends NS\GardenerAbstract implements NS\WaterableInterface {
+class GardenerClass extends GardenerAbstract implements WaterableInterface {
 
     /**
      * Конструктор GardenerClass

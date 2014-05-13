@@ -5,16 +5,13 @@
  * Date: 06.05.14
  * Time: 18:17
  */
-
-namespace App\Classes;
-
-use App\Classes as NS;
+namespace BionicUniversity\RuslanSmyk\Gardener;
 
 /**
  * Class SuperGardenerClass
- * @package App\Classes
+ * @package BionicUniversity\RuslanSmyk\Gardener
  */
-class SuperGardenerClass extends NS\GardenerClass implements NS\FertilisableInterface {
+class SuperGardenerClass extends GardenerClass implements FertilisableInterface {
 
     /**
      * Удобряет цветы

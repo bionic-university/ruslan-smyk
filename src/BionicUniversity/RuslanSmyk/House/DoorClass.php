@@ -5,6 +5,7 @@
  * Date: 28.04.14
  * Time: 15:12
  */
+namespace BionicUniversity\RuslanSmyk\House;
 
 class DoorClass extends AbstractBase{
 

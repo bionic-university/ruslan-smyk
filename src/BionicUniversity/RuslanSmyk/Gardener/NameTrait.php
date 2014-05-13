@@ -5,13 +5,11 @@
  * Date: 05.05.14
  * Time: 20:18
  */
-
-namespace App\Classes;
-
+namespace BionicUniversity\RuslanSmyk\Gardener;
 
 /**
  * Class NameTrait
- * @package App\Classes
+ * @package BionicUniversity\RuslanSmyk\Gardener
  */
 trait NameTrait {
 

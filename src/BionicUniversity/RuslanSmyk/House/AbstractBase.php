@@ -5,6 +5,7 @@
  * Date: 28.04.14
  * Time: 15:14
  */
+namespace BionicUniversity\RuslanSmyk\House;
 
 class AbstractBase {
 
