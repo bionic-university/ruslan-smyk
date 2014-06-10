@@ -1,0 +1,7 @@
+parameters:
+#    ruslan_smyk_rectal.example.class: RuslanSmyk\RectalBundle\Example
+
+services:
+#    ruslan_smyk_rectal.example:
+#        class: %ruslan_smyk_rectal.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

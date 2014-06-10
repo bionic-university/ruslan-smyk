@@ -1,0 +1,4 @@
+ruslan_smyk_rectal:
+    resource: "@RuslanSmykRectalBundle/Resources/config/routing.yml"
+    prefix:   /
+

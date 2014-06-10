@@ -1,0 +1,30 @@
+RuslanSmyk\RectalBundle\Entity\Draftee:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: '50'
+        lastname:
+            type: string
+            length: '50'
+        patronymic:
+            type: string
+            length: '50'
+        address:
+            type: string
+            length: '100'
+        birthday:
+            type: date
+        inn:
+            type: integer
+        passport:
+            type: string
+            length: '8'
+    lifecycleCallbacks: {  }

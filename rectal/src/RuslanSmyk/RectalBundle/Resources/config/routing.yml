@@ -1,0 +1,7 @@
+ruslan_smyk_rectal_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: RuslanSmykRectalBundle:Default:index }
+
+ruslan_smyk_rectal_draftee:
+    resource: "@RuslanSmykRectalBundle/Resources/config/routing/draftee.yml"
+    prefix:   /draftee

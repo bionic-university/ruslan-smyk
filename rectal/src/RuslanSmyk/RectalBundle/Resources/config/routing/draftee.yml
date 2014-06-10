@@ -1,0 +1,30 @@
+draftee:
+    pattern:  /
+    defaults: { _controller: "RuslanSmykRectalBundle:Draftee:index" }
+
+draftee_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "RuslanSmykRectalBundle:Draftee:show" }
+
+draftee_new:
+    pattern:  /new
+    defaults: { _controller: "RuslanSmykRectalBundle:Draftee:new" }
+
+draftee_create:
+    pattern:  /create
+    defaults: { _controller: "RuslanSmykRectalBundle:Draftee:create" }
+    requirements: { _method: post }
+
+draftee_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "RuslanSmykRectalBundle:Draftee:edit" }
+
+draftee_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "RuslanSmykRectalBundle:Draftee:update" }
+    requirements: { _method: post|put }
+
+draftee_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "RuslanSmykRectalBundle:Draftee:delete" }
+    requirements: { _method: post|delete }
