@@ -1,6 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
+<<<<<<< HEAD
  * User: bionic
  * Date: 5/14/14
  * Time: 10:44 AM
@@ -14,6 +15,18 @@ class Image extends AbstractResizer implements ImageInterface {
     protected $width;
     protected $height;
 
+=======
+ * User: WINROL
+ * Date: 05.05.14
+ * Time: 14:39
+ */
+namespace BionicUniversity\RuslanSmyk\Exam;
+
+class Image extends AbstractResizer implements ImageInterface{
+
+    private $height;
+    private $width;
+>>>>>>> bb5db86c5d2611f93a2829469bd62ff2e83f5aa3
 
     public function __construct($height, $width)
     {
@@ -21,6 +34,7 @@ class Image extends AbstractResizer implements ImageInterface {
         $this->width = $width;
     }
 
+<<<<<<< HEAD
 
     /**
      * @param mixed $width
@@ -71,6 +85,49 @@ class Image extends AbstractResizer implements ImageInterface {
         }
     }
 
+=======
+    public function thumbnail(){
+
+        $w = $this->getWidth();
+        $h = $this->getHeight();
+
+
+        if($w === $h){
+            $m = 'image is good';
+        }else{
+
+            //center
+            $w = round($w/2);
+            $h = round($h/2);
+
+            //new
+            $this->setWidth($w);
+            $this->setHeight($h);
+
+            //resize
+
+            $m = 'image is resizer; w: ' . $w . 'h: ' . $h;
+        }
+
+        echo $m;
+    }
+
+    /**
+     * @param mixed $height
+     */
+    public function setHeight($height)
+    {
+        $this->height = $height;
+    }
+
+    /**
+     * @param mixed $width
+     */
+    public function setWidth($width)
+    {
+        $this->width = $width;
+    }
+>>>>>>> bb5db86c5d2611f93a2829469bd62ff2e83f5aa3
 
     public function getHeight(){
         return $this->height;
@@ -81,4 +138,8 @@ class Image extends AbstractResizer implements ImageInterface {
     }
 
 
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> bb5db86c5d2611f93a2829469bd62ff2e83f5aa3
