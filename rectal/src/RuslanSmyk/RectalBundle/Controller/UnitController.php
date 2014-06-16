@@ -5,37 +5,37 @@ namespace RuslanSmyk\RectalBundle\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-use RuslanSmyk\RectalBundle\Entity\Draftee;
-use RuslanSmyk\RectalBundle\Form\DrafteeType;
+use RuslanSmyk\RectalBundle\Entity\Unit;
+use RuslanSmyk\RectalBundle\Form\UnitType;
 
 /**
- * Draftee controller.
+ * Unit controller.
  *
  */
-class DrafteeController extends Controller
+class UnitController extends Controller
 {
 
     /**
-     * Lists all Draftee entities.
+     * Lists all Unit entities.
      *
      */
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('RuslanSmykRectalBundle:Draftee')->findAll();
+        $entities = $em->getRepository('RuslanSmykRectalBundle:Unit')->findAll();
 
-        return $this->render('RuslanSmykRectalBundle:Draftee:index.html.twig', array(
+        return $this->render('RuslanSmykRectalBundle:Unit:index.html.twig', array(
             'entities' => $entities,
         ));
     }
     /**
-     * Creates a new Draftee entity.
+     * Creates a new Unit entity.
      *
      */
     public function createAction(Request $request)
     {
-        $entity = new Draftee();
+        $entity = new Unit();
         $form = $this->createCreateForm($entity);
         $form->handleRequest($request);
 
@@ -44,26 +44,26 @@ class DrafteeController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('draftee_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('unit_show', array('id' => $entity->getId())));
         }
 
-        return $this->render('RuslanSmykRectalBundle:Draftee:new.html.twig', array(
+        return $this->render('RuslanSmykRectalBundle:Unit:new.html.twig', array(
             'entity' => $entity,
             'form'   => $form->createView(),
         ));
     }
 
     /**
-    * Creates a form to create a Draftee entity.
+    * Creates a form to create a Unit entity.
     *
-    * @param Draftee $entity The entity
+    * @param Unit $entity The entity
     *
     * @return \Symfony\Component\Form\Form The form
     */
-    private function createCreateForm(Draftee $entity)
+    private function createCreateForm(Unit $entity)
     {
-        $form = $this->createForm(new DrafteeType(), $entity, array(
-            'action' => $this->generateUrl('draftee_create'),
+        $form = $this->createForm(new UnitType(), $entity, array(
+            'action' => $this->generateUrl('unit_create'),
             'method' => 'POST',
         ));
 
@@ -73,59 +73,59 @@ class DrafteeController extends Controller
     }
 
     /**
-     * Displays a form to create a new Draftee entity.
+     * Displays a form to create a new Unit entity.
      *
      */
     public function newAction()
     {
-        $entity = new Draftee();
+        $entity = new Unit();
         $form   = $this->createCreateForm($entity);
 
-        return $this->render('RuslanSmykRectalBundle:Draftee:new.html.twig', array(
+        return $this->render('RuslanSmykRectalBundle:Unit:new.html.twig', array(
             'entity' => $entity,
             'form'   => $form->createView(),
         ));
     }
 
     /**
-     * Finds and displays a Draftee entity.
+     * Finds and displays a Unit entity.
      *
      */
     public function showAction($id)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('RuslanSmykRectalBundle:Draftee')->find($id);
+        $entity = $em->getRepository('RuslanSmykRectalBundle:Unit')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Draftee entity.');
+            throw $this->createNotFoundException('Unable to find Unit entity.');
         }
 
         $deleteForm = $this->createDeleteForm($id);
 
-        return $this->render('RuslanSmykRectalBundle:Draftee:show.html.twig', array(
+        return $this->render('RuslanSmykRectalBundle:Unit:show.html.twig', array(
             'entity'      => $entity,
             'delete_form' => $deleteForm->createView(),        ));
     }
 
     /**
-     * Displays a form to edit an existing Draftee entity.
+     * Displays a form to edit an existing Unit entity.
      *
      */
     public function editAction($id)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('RuslanSmykRectalBundle:Draftee')->find($id);
+        $entity = $em->getRepository('RuslanSmykRectalBundle:Unit')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Draftee entity.');
+            throw $this->createNotFoundException('Unable to find Unit entity.');
         }
 
         $editForm = $this->createEditForm($entity);
         $deleteForm = $this->createDeleteForm($id);
 
-        return $this->render('RuslanSmykRectalBundle:Draftee:edit.html.twig', array(
+        return $this->render('RuslanSmykRectalBundle:Unit:edit.html.twig', array(
             'entity'      => $entity,
             'edit_form'   => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
@@ -133,16 +133,16 @@ class DrafteeController extends Controller
     }
 
     /**
-    * Creates a form to edit a Draftee entity.
+    * Creates a form to edit a Unit entity.
     *
-    * @param Draftee $entity The entity
+    * @param Unit $entity The entity
     *
     * @return \Symfony\Component\Form\Form The form
     */
-    private function createEditForm(Draftee $entity)
+    private function createEditForm(Unit $entity)
     {
-        $form = $this->createForm(new DrafteeType(), $entity, array(
-            'action' => $this->generateUrl('draftee_update', array('id' => $entity->getId())),
+        $form = $this->createForm(new UnitType(), $entity, array(
+            'action' => $this->generateUrl('unit_update', array('id' => $entity->getId())),
             'method' => 'PUT',
         ));
 
@@ -151,17 +151,17 @@ class DrafteeController extends Controller
         return $form;
     }
     /**
-     * Edits an existing Draftee entity.
+     * Edits an existing Unit entity.
      *
      */
     public function updateAction(Request $request, $id)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('RuslanSmykRectalBundle:Draftee')->find($id);
+        $entity = $em->getRepository('RuslanSmykRectalBundle:Unit')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Draftee entity.');
+            throw $this->createNotFoundException('Unable to find Unit entity.');
         }
 
         $deleteForm = $this->createDeleteForm($id);
@@ -171,17 +171,17 @@ class DrafteeController extends Controller
         if ($editForm->isValid()) {
             $em->flush();
 
-            return $this->redirect($this->generateUrl('draftee_edit', array('id' => $id)));
+            return $this->redirect($this->generateUrl('unit_edit', array('id' => $id)));
         }
 
-        return $this->render('RuslanSmykRectalBundle:Draftee:edit.html.twig', array(
+        return $this->render('RuslanSmykRectalBundle:Unit:edit.html.twig', array(
             'entity'      => $entity,
             'edit_form'   => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
     }
     /**
-     * Deletes a Draftee entity.
+     * Deletes a Unit entity.
      *
      */
     public function deleteAction(Request $request, $id)
@@ -191,21 +191,21 @@ class DrafteeController extends Controller
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $entity = $em->getRepository('RuslanSmykRectalBundle:Draftee')->find($id);
+            $entity = $em->getRepository('RuslanSmykRectalBundle:Unit')->find($id);
 
             if (!$entity) {
-                throw $this->createNotFoundException('Unable to find Draftee entity.');
+                throw $this->createNotFoundException('Unable to find Unit entity.');
             }
 
             $em->remove($entity);
             $em->flush();
         }
 
-        return $this->redirect($this->generateUrl('draftee'));
+        return $this->redirect($this->generateUrl('unit'));
     }
 
     /**
-     * Creates a form to delete a Draftee entity by id.
+     * Creates a form to delete a Unit entity by id.
      *
      * @param mixed $id The entity id
      *
@@ -214,7 +214,7 @@ class DrafteeController extends Controller
     private function createDeleteForm($id)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('draftee_delete', array('id' => $id)))
+            ->setAction($this->generateUrl('unit_delete', array('id' => $id)))
             ->setMethod('DELETE')
             ->add('submit', 'submit', array('label' => 'Delete'))
             ->getForm()

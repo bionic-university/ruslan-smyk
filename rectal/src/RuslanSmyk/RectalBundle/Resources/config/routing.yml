@@ -1,7 +1,20 @@
 ruslan_smyk_rectal_homepage:
-    pattern:  /hello/{name}
+    pattern: /
     defaults: { _controller: RuslanSmykRectalBundle:Default:index }
 
 ruslan_smyk_rectal_draftee:
     resource: "@RuslanSmykRectalBundle/Resources/config/routing/draftee.yml"
     prefix:   /draftee
+
+ruslan_smyk_rectal_unit:
+        resource: "@RuslanSmykRectalBundle/Resources/config/routing/unit.yml"
+        prefix:   /unit
+
+ruslan_smyk_rectal_fund:
+        resource: "@RuslanSmykRectalBundle/Resources/config/routing/fund.yml"
+        prefix:   /fund
+ruslan_smyk_rectal_reservist:
+       resource: "@RuslanSmykRectalBundle/Resources/config/routing/reservist.yml"
+       prefix:   /reservist
+
+

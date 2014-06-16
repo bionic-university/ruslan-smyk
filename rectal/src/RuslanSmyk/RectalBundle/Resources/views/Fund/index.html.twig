@@ -1,0 +1,45 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Fund list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Dateunfitness</th>
+                <th>Why</th>
+				<th>draftee</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('fund_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{% if entity.dateUnfitness %}{{ entity.dateUnfitness|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.why }}</td>
+				<td><a href="{{ path('draftee_show', { 'id': entity.getDrafteeId() }) }}">{{ entity.draftee }}</a></td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('fund_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('fund_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('fund_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

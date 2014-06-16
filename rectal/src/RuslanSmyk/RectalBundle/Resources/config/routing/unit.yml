@@ -1,0 +1,30 @@
+unit:
+    pattern:  /
+    defaults: { _controller: "RuslanSmykRectalBundle:Unit:index" }
+
+unit_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "RuslanSmykRectalBundle:Unit:show" }
+
+unit_new:
+    pattern:  /new
+    defaults: { _controller: "RuslanSmykRectalBundle:Unit:new" }
+
+unit_create:
+    pattern:  /create
+    defaults: { _controller: "RuslanSmykRectalBundle:Unit:create" }
+    requirements: { _method: post }
+
+unit_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "RuslanSmykRectalBundle:Unit:edit" }
+
+unit_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "RuslanSmykRectalBundle:Unit:update" }
+    requirements: { _method: post|put }
+
+unit_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "RuslanSmykRectalBundle:Unit:delete" }
+    requirements: { _method: post|delete }

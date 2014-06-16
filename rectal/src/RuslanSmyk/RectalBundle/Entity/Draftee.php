@@ -22,7 +22,7 @@ class Draftee
     /**
      * @var string
      */
-    private $lastname;
+    private $lastName;
 
     /**
      * @var string
@@ -48,8 +48,33 @@ class Draftee
      * @var string
      */
     private $passport;
+	
+	/**
+     * @var string
+     */
+	private $fund;
+	
+	public function __toString()
+    {
+        return $this->name . ' ' . $this->lastName. ' ' . $this->patronymic;
+    }
+	
+	/**
+     * @return mixed
+     */
+    public function getFund()
+    {
+        return $this->fund;
+    }
 
-
+    /**
+     * @param mixed $fund
+     */
+    public function setFund($fund)
+    {
+        $this->fund = $fund;
+    }
+	
     /**
      * Get id
      *
@@ -84,26 +109,26 @@ class Draftee
     }
 
     /**
-     * Set lastname
+     * Set lastName
      *
-     * @param string $lastname
+     * @param string $lastName
      * @return Draftee
      */
-    public function setLastname($lastname)
+    public function setLastName($lastName)
     {
-        $this->lastname = $lastname;
+        $this->lastName = $lastName;
 
         return $this;
     }
 
     /**
-     * Get lastname
+     * Get lastName
      *
      * @return string 
      */
-    public function getLastname()
+    public function getLastName()
     {
-        return $this->lastname;
+        return $this->lastName;
     }
 
     /**

@@ -1,0 +1,26 @@
+RuslanSmyk\RectalBundle\Entity\Reservist:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        dateIn:
+            type: date
+        dateOut:
+            type: date
+
+    manyToOne:
+        unit:
+            targetEntity: RuslanSmyk\RectalBundle\Entity\Unit
+            inversedBy: reservistas
+    oneToOne:
+        draftee:
+            targetEntity: RuslanSmyk\RectalBundle\Entity\Draftee
+            joinColumn:
+                name: draftee_id
+                referencedColumnName: id
+    lifecycleCallbacks: {  }

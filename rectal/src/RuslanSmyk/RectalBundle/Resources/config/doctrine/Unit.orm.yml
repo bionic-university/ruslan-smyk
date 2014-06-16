@@ -1,0 +1,23 @@
+RuslanSmyk\RectalBundle\Entity\Unit:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: '50'
+        disposition:
+            type: string
+            length: 255
+
+    oneToMany:
+        reservistas:
+            targetEntity: RuslanSmyk\RectalBundle\Entity\Reservist
+            mappedBy: unit
+
+    lifecycleCallbacks: {  }

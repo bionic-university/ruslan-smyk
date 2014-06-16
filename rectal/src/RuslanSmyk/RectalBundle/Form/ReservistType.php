@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class DrafteeType extends AbstractType
+class ReservistType extends AbstractType
 {
         /**
      * @param FormBuilderInterface $builder
@@ -15,15 +15,10 @@ class DrafteeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('lastName')
-            ->add('patronymic')
-            ->add('address')
-            ->add('birthday', 'date', array(
-                'years' => range(1980,1996)
-            ))
-            ->add('inn')
-            ->add('passport')
+            ->add('dateIn')
+            ->add('dateOut')
+            ->add('draftee')
+            ->add('unit')
         ;
     }
     
@@ -33,7 +28,7 @@ class DrafteeType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'RuslanSmyk\RectalBundle\Entity\Draftee'
+            'data_class' => 'RuslanSmyk\RectalBundle\Entity\Reservist'
         ));
     }
 
@@ -42,6 +37,6 @@ class DrafteeType extends AbstractType
      */
     public function getName()
     {
-        return 'ruslansmyk_rectalbundle_draftee';
+        return 'ruslansmyk_rectalbundle_reservist';
     }
 }

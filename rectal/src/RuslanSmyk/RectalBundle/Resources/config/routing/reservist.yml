@@ -1,0 +1,30 @@
+reservist:
+    pattern:  /
+    defaults: { _controller: "RuslanSmykRectalBundle:Reservist:index" }
+
+reservist_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "RuslanSmykRectalBundle:Reservist:show" }
+
+reservist_new:
+    pattern:  /new
+    defaults: { _controller: "RuslanSmykRectalBundle:Reservist:new" }
+
+reservist_create:
+    pattern:  /create
+    defaults: { _controller: "RuslanSmykRectalBundle:Reservist:create" }
+    requirements: { _method: post }
+
+reservist_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "RuslanSmykRectalBundle:Reservist:edit" }
+
+reservist_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "RuslanSmykRectalBundle:Reservist:update" }
+    requirements: { _method: post|put }
+
+reservist_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "RuslanSmykRectalBundle:Reservist:delete" }
+    requirements: { _method: post|delete }

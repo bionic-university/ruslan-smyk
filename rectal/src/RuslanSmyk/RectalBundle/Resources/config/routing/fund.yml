@@ -1,0 +1,30 @@
+fund:
+    pattern:  /
+    defaults: { _controller: "RuslanSmykRectalBundle:Fund:index" }
+
+fund_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "RuslanSmykRectalBundle:Fund:show" }
+
+fund_new:
+    pattern:  /new
+    defaults: { _controller: "RuslanSmykRectalBundle:Fund:new" }
+
+fund_create:
+    pattern:  /create
+    defaults: { _controller: "RuslanSmykRectalBundle:Fund:create" }
+    requirements: { _method: post }
+
+fund_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "RuslanSmykRectalBundle:Fund:edit" }
+
+fund_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "RuslanSmykRectalBundle:Fund:update" }
+    requirements: { _method: post|put }
+
+fund_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "RuslanSmykRectalBundle:Fund:delete" }
+    requirements: { _method: post|delete }

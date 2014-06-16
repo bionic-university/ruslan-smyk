@@ -11,7 +11,7 @@ RuslanSmyk\RectalBundle\Entity\Draftee:
         name:
             type: string
             length: '50'
-        lastname:
+        lastName:
             type: string
             length: '50'
         patronymic:
@@ -27,4 +27,5 @@ RuslanSmyk\RectalBundle\Entity\Draftee:
         passport:
             type: string
             length: '8'
+
     lifecycleCallbacks: {  }
