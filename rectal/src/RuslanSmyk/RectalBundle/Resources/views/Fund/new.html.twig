@@ -1,6 +1,11 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
+    <div id="mainMenu" style="">
+
+        {{ knp_menu_render('RuslanSmykRectalBundle:Builder:mainMenu', {'depth': 2, 'currentAsLink': false}) }}
+
+    </div>
     <h1>Fund creation</h1>
 
     {{ form(form) }}

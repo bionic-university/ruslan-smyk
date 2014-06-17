@@ -1,6 +1,14 @@
 
-<h1>DB RECTAL ! </h1>
-<a href="{{ fund }}">fund</a><br/>
-<a href="{{ draftee }}">draftee</a><br/>
-<a href="{{ unit }}">unit</a><br/>
-<a href="{{ reservist }}">reservist</a><br/>
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+
+    <h1>DB RECTAL ! </h1>
+
+    <div id="mainMenu" style="">
+
+        {{ knp_menu_render('RuslanSmykRectalBundle:Builder:mainMenu', {'depth': 2, 'currentAsLink': false}) }}
+
+    </div>
+
+{% endblock %}
